@@ -1,0 +1,43 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    scroll-behavior: smooth;
+
+    overflow-x: hidden;
+}
+
+.maxWidth {
+    width: 100vw;
+}
+
+.width90vw {
+    width: 90%;
+}
+
+header {
+    background-color: rgb(8, 33, 41);
+    color: lightgray;
+    height: 100px;
+}
+
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.titleDiv {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100px;
+}
+
+.mainDiv {
+    background-color: rgb(5, 23, 30);
+    height: 100vh;
+}
+
+a {
+    text-decoration: none;
+}
