@@ -4,9 +4,13 @@
 }
 
 .logoCircle {
-    background-color: rgb(26,138,221);
+    background-color: rgb(26, 138, 221);
     height: 64px;
     width: 64px;
     margin-right: 20px;
     border-radius: 50%;
+}
+
+.submitButton {
+    height: 24px;
 }
