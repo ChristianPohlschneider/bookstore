@@ -11,6 +11,22 @@
     border-radius: 50%;
 }
 
+.library {
+    flex-direction: column;
+    gap: 10px;
+    padding-bottom: 20px;
+}
+
 .submitButton {
     height: 24px;
+    cursor: pointer;
+}
+
+.heart {
+    height: 24px;
+    cursor: pointer;
+}
+
+.unvisible{
+    display: none;
 }
