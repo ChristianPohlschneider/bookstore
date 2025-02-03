@@ -1,5 +1,3 @@
-
-
 function init() {
   let bookRef = document.getElementById("library");
   bookRef.innerHTML = "";

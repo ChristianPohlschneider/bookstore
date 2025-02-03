@@ -23,10 +23,12 @@
 }
 
 .heart {
+    content: url("./assets/icons/redHeart.png");
     height: 24px;
     cursor: pointer;
 }
 
-.unvisible{
-    display: none;
+.unlike{
+    content: url("./assets/icons/redHeartUnlike.png");
+    background-image: url("");
 }

@@ -16,7 +16,7 @@ function getBookPropsTemplate(index) {
                         <div id="priceDiv">${books[index].price}</div>
                         <div class="likeDiv">
                             <p id="likes">${books[index].likes}</p>
-                            <img id="${"likes" + index}" class="heart" onclick="heartLikeToggle()" src="/assets/icons/redHeart.png"
+                            <img id="${"likes" + index}" class="heart" onclick="heartLikeToggle(${index})"
                                 alt="likeHeart">
                         </div>
                     </div>
@@ -43,9 +43,9 @@ function getBookPropsTemplate(index) {
 
                     </div>
                     <div class="inputDiv">
-                        <input id="userCommentInput" class="userCommentInput" type="text"
+                        <input id=${"userCommentInput"  + index} class="userCommentInput" type="text"
                             placeholder=" Schreibe einen Kommentar...">
-                        <img class="submitButton" onclick="addComment()" src="./assets/icons/paperPlaneb.png" alt="submit">
+                        <img class="submitButton" onclick="addComment(${index})" src="./assets/icons/paperPlaneb.png" alt="submit">
                     </div>
                 </div>
 
