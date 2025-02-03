@@ -8,10 +8,17 @@ function renderComment(index) {
 }
 
 function addComment(index) {
-    let commentsListRef = document.getElementById("commentsList" + index);
-    let comment = document.getElementById("userCommentInput"  + index).value;
-    let indexComm = books[index].comments.length;
-    books[index].comments.push(
-        { name: 'Christian', comment: comment });
-    commentsListRef.innerHTML += getCommentsTemplate(indexComm, index);
+    if (document.getElementById("userCommentInput" + index).value == "") {
+        document.getElementById("warning" + index).innerHTML = "Bitte einen Kommentar eingeben!";
+    }
+    else {
+        let commentsListRef = document.getElementById("commentsList" + index);
+        let comment = document.getElementById("userCommentInput" + index).value;
+        let indexComm = books[index].comments.length;
+        books[index].comments.push(
+            { name: 'Christian', comment: comment });
+        commentsListRef.innerHTML += getCommentsTemplate(indexComm, index);
+        document.getElementById("warning" + index).innerHTML = "";
+        document.getElementById("userCommentInput" + index).value = "";
+    }
 }

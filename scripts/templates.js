@@ -43,10 +43,11 @@ function getBookPropsTemplate(index) {
 
                     </div>
                     <div class="inputDiv">
-                        <input id=${"userCommentInput"  + index} class="userCommentInput" type="text"
+                        <input id=${"userCommentInput" + index} class="userCommentInput" type="text"
                             placeholder=" Schreibe einen Kommentar...">
                         <img class="submitButton" onclick="addComment(${index})" src="./assets/icons/paperPlaneb.png" alt="submit">
                     </div>
+                    <p id=${"warning" + index} class="warning"></p>
                 </div>
 
             </div>
