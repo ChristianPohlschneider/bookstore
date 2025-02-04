@@ -17,6 +17,8 @@ function addComment(index) {
         let indexComm = books[index].comments.length;
         books[index].comments.push(
             { name: 'Christian', comment: comment });
+            saveToLocalStorage()
+            books = JSON.parse(localStorage.getItem("books"));
         commentsListRef.innerHTML += getCommentsTemplate(indexComm, index);
         document.getElementById("warning" + index).innerHTML = "";
         document.getElementById("userCommentInput" + index).value = "";
