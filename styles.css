@@ -28,7 +28,33 @@
     cursor: pointer;
 }
 
-.unlike{
+.unlike {
     content: url("./assets/icons/redHeartUnlike.png");
     background-image: url("");
+}
+
+@media(max-width: 600px) {
+    h1 {
+        font-size: 32px;
+    }
+
+    .bookDiv {
+        width: 80vw !important;
+    }
+}
+
+@media(max-width: 480px) {
+    h1 {
+        font-size: 24px;
+    }
+
+    .titleDiv {
+        text-align: center;
+        justify-content: space-between;
+        gap: 16px;
+    }
+
+    .logoCircle {
+        margin-right: 0px;
+}
 }

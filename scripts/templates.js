@@ -13,7 +13,7 @@ function getBookPropsTemplate(index) {
 
                 <div class="bookProperties">
                     <div class="priceLikeDiv">
-                        <div id="priceDiv">${books[index].price}</div>
+                        <div id="priceDiv">${books[index].price} €</div>
                         <div class="likeDiv">
                             <p id="likes">${books[index].likes}</p>
                             <img id="${"likes" + index}" class="heart" onclick="heartLikeToggle(${index})"
@@ -38,7 +38,7 @@ function getBookPropsTemplate(index) {
 
                 <div class="commentDiv">
                     <h3 class="commentTitle">Kommentare:</h3>
-                     <div id=${"commentsList" + index}>
+                     <div class="commentsInputDiv" id=${"commentsList" + index}>
 
 
                     </div>
@@ -56,9 +56,9 @@ function getBookPropsTemplate(index) {
 
 function getCommentsTemplate(indexComm, index) {
     return `
-                        <div class="commentsList">
-                        <p id=${"name"}>${books[index].comments[indexComm].name}</p>
-                        <p id=${"userComment"}>: ${books[index].comments[indexComm].comment}</p>
-                        </div>
+            <div class="commentsList">
+            <p class="name" id=${"name"}>${books[index].comments[indexComm].name}</p>
+            <p class="userComment" id=${"userComment"}>: ${books[index].comments[indexComm].comment}</p>
+            </div>
     `;
 }

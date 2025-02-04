@@ -1,6 +1,6 @@
 .bookDiv {
     flex-direction: column;
-    width: 50vw;
+    width: 60vw;
     background-color: rgb(13, 50, 64);
     margin-top: 20px;
     border-radius: 20px;
@@ -13,6 +13,8 @@
 }
 
 .bookTitleDiv {
+    width: 90%;
+    text-align: center;
     padding: 20px 0;
 }
 
@@ -72,8 +74,24 @@
 }
 
 .commentsList {
+    width: 100%;
     display: flex;
     gap: 5px;
+}
+
+.commentsInputDiv {
+    width: 100%;
+}
+
+.name {
+    width: 25%;
+    word-break: break-all;
+}
+
+.userComment {
+    width: 75%;
+    display: flex;
+    text-align: justify;
 }
 
 .inputDiv {
@@ -100,4 +118,11 @@
 
 ::placeholder {
     color: rgba(211, 211, 211, 0.644);
+}
+
+.warning {
+    display: flex;
+    padding-top: 10px;
+    color: red;
+    text-align: center;
 }
