@@ -82,13 +82,14 @@
 .commentTitle {
     width: 100%;
     display: flex;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
 }
 
 .commentsList {
     width: 100%;
     display: flex;
     gap: 5px;
+    padding-top: 5px;
 }
 
 .commentsInputDiv {
