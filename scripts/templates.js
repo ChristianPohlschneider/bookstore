@@ -21,16 +21,9 @@ function getBookPropsTemplate(index) {
                         </div>
                     </div>
                     <div class="propertyDiv">
-                        <div class="propertyDivTitles">
-                            <p>Author</p>
-                            <p>Erscheinungsdatum</p>
-                            <p>Genre</p>
-                        </div>
-                        <div class="propertyDivTitles">
-                            <p id="author">: ${books[index].author}</p>
-                            <p id="appearanceDate">: ${books[index].publishedYear}</p>
-                            <p id="genre">: ${books[index].genre}</p>
-                        </div>
+                            <div class="property"><p class="whichProperty">Author</p><p class="propertyEntry" id="author">:&nbsp;${books[index].author}</p></div>
+                            <div class="property"><p class="whichProperty">Erscheinungsdatum</p><p class="propertyEntry" id="appearanceDate">:&nbsp;${books[index].publishedYear}</p></div>
+                            <div class="property"><p class="whichProperty">Genre</p><p class="propertyEntry" id="genre">:&nbsp;${books[index].genre}</p></div>
                     </div>
                 </div>
 
@@ -40,16 +33,15 @@ function getBookPropsTemplate(index) {
                     <h3 class="commentTitle">Kommentare:</h3>
                      <div class="commentsInputDiv" id=${"commentsList" + index}>
 
-
                     </div>
                     <div class="inputDiv">
                         <input id=${"userCommentInput" + index} class="userCommentInput" type="text"
-                            placeholder=" Schreibe einen Kommentar...">
+                            placeholder="Kommentieren...">
                         <img class="submitButton" onclick="addComment(${index})" src="./assets/icons/paperPlaneb.png" alt="submit">
                     </div>
                     <p id=${"warning" + index} class="warning"></p>
                 </div>
-
+                
             </div>
    `;
 }

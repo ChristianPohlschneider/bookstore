@@ -1,5 +1,4 @@
 function init() {
-
   if (localStorage.getItem("books") == null) {
     renderBookstore();
   }
