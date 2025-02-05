@@ -17,10 +17,12 @@ function addComment(index) {
         let indexComm = books[index].comments.length;
         books[index].comments.push(
             { name: 'Christian', comment: comment });
-            saveToLocalStorage()
-            books = JSON.parse(localStorage.getItem("books"));
+        saveToLocalStorage()
+        books = JSON.parse(localStorage.getItem("books"));
         commentsListRef.innerHTML += getCommentsTemplate(indexComm, index);
         document.getElementById("warning" + index).innerHTML = "";
         document.getElementById("userCommentInput" + index).value = "";
+        let element = document.getElementById("commentsList" + index);
+        element.scrollTop = element.scrollHeight;
     }
 }
