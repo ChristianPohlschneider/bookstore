@@ -2,13 +2,13 @@ function getHeartLikeToggle(index) {
   if (books[index].liked == true) {
     let likeRef = document.getElementById("likes" + index);
     likeRef.classList.remove("unlike");
-    
+
   }
   else {
     let likeRef = document.getElementById("likes" + index);
     likeRef.classList.add("unlike");
   }
-  
+
 }
 
 function heartLikeToggle(index) {
@@ -18,7 +18,9 @@ function heartLikeToggle(index) {
     books[index].liked = false;
     books[index].likes = books[index].likes - 1;
     saveToLocalStorage()
-    init()
+    renderLikes(index)
+
+    // init()
   }
   else {
     let likeRef = document.getElementById("likes" + index);
@@ -26,6 +28,16 @@ function heartLikeToggle(index) {
     books[index].liked = true;
     books[index].likes = books[index].likes + 1;
     saveToLocalStorage()
-    init()
+    renderLikes(index)
+    // init()
   }
+}
+
+function renderLikes(index) {
+  books = JSON.parse(localStorage.getItem("books"));
+  document.getElementById("likesnumber" + index).innerHTML = books[index].likes;
+}
+
+function saveToLocalStorage() {
+  localStorage.setItem("books", JSON.stringify(books));
 }

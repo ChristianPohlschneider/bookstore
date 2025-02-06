@@ -1,8 +1,7 @@
 function renderComment(index) {
     let commentsListRef = document.getElementById("commentsList" + index);
     commentsListRef.innerHTML = ""
-    for (let indexComm = 0; indexComm < books[index].comments.length; indexComm++) {
-
+    for (let indexComm = books[index].comments.length - 1; indexComm > -1; indexComm--) {
         commentsListRef.innerHTML += getCommentsTemplate(indexComm, index);
     }
 }
@@ -12,17 +11,14 @@ function addComment(index) {
         document.getElementById("warning" + index).innerHTML = "Bitte einen Kommentar eingeben!";
     }
     else {
-        let commentsListRef = document.getElementById("commentsList" + index);
         let comment = document.getElementById("userCommentInput" + index).value;
-        let indexComm = books[index].comments.length;
         books[index].comments.push(
             { name: 'Christian', comment: comment });
+
         saveToLocalStorage()
         books = JSON.parse(localStorage.getItem("books"));
-        commentsListRef.innerHTML += getCommentsTemplate(indexComm, index);
+        renderComment(index)
         document.getElementById("warning" + index).innerHTML = "";
         document.getElementById("userCommentInput" + index).value = "";
-        let element = document.getElementById("commentsList" + index);
-        element.scrollTop = element.scrollHeight;
     }
 }
