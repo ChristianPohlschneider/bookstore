@@ -19,8 +19,6 @@ function heartLikeToggle(index) {
     books[index].likes = books[index].likes - 1;
     saveToLocalStorage()
     renderLikes(index)
-
-    // init()
   }
   else {
     let likeRef = document.getElementById("likes" + index);
@@ -29,7 +27,6 @@ function heartLikeToggle(index) {
     books[index].likes = books[index].likes + 1;
     saveToLocalStorage()
     renderLikes(index)
-    // init()
   }
 }
 
